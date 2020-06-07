@@ -48,9 +48,10 @@ params:
   categories:
     - name: Network
       description: Local area network and wifi at the house
-      closed: true
+      closed: false
     - name: Cameras
       untitled: true
+      closed: false
   description: Status page for Godbey properties, networks, and internet connection.
   enableCustomHTML: true
   useLargeHeaderDesign: false
