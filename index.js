@@ -52,11 +52,14 @@ var IssuesList = React.createClass({
             issueItems = e('p',{className : 'alert alert-danger',key : 'error'},this.props.error)
         else if (this.props.issues !== undefined){
             issueItems = this.props.issues.map(function(issue){
-                var found = false;
-                issue.labels.map(function(label){
-                    if (label.name == 'incident')
-                        found = true;
-                })
+                // Uncomment if you want to track individual label names
+                // set var found to true to track all labels
+                // var found = false;
+                // issue.labels.map(function(label){
+                //     if (label.name == 'incident')
+                //         found = true;
+                // })
+                var found = true;
                 if (!found)
                     return;
                 var creationDate = new Date(issue.created_at);
